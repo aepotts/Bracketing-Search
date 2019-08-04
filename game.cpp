@@ -1,16 +1,31 @@
 #include "game.h"
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
-Game::Game(int target) // "target" is the target number to hit. This is randomly generated.
+Game::Game(int target, int guess) // "target" is the target number to hit. This is randomly generated.
+{
+	targetVal = target;
+	userVal = guess;
+}
 
-/*need to store "target," "guess,"
-need to compare these 2 values. My outline is written comparing in this order: guess ? target
-	this function will have 5 possible (int) results:
-	0 : quit
-	1 : guess = target
-	2 : guess > target
-	3 : guess < target
-	4 : not a valid entry
-	*/
+
+int Game::compareVal() //this could maybe be optimized
+{
+	// Case 0
+	if (userVal == 0)
+		return 0;
+	// Case 1
+	if (userVal == targetVal)
+		return 1;
+	// Case 2
+	if (userVal > targetVal)
+		return 2;
+	// Case 3
+	if (userVal < targetVal)
+		return 3;
+	//Case 4
+	else
+		return 4;
+}
