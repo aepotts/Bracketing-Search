@@ -1,6 +1,7 @@
-#pragma once
+// game.h : header file for the bracket search game
+
+#include <iostream>
 #include <cstdlib>
-#include <stdio.h>
 #include <ctime>
 using namespace std;
 
@@ -11,8 +12,7 @@ public:
 	Game(int, int); //constructor
 	int compareVal(); // Compare the values of guess and target, output an int based on the case. See ReadMe for case values.
 	int userVal; // probs doesn't need to be here?
-	int targetVal; // random value the user is trying to guess - move back to private after testing
 private:
-
+	int targetVal; // random value the user is trying to guess - move back to private after testing
 };
 
