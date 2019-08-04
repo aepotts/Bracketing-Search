@@ -2,9 +2,12 @@
 #include <cstdlib>
 #include <stdio.h>
 
-//Calling this class "game" because it's keeping track of one session of this guessing game
-class game
+//Calling this class "Game" because it's keeping track of one session of this guessing game
+class Game
 {
+public:
+	explicit Game(int);
 
+private:
 };
 
